@@ -18,6 +18,12 @@ import { SingleAgentDetailComponent } from './single-agent-detail/single-agent-d
 import { SingleAgentComponent } from './single-agent/single-agent.component';
 import { UpdatePaymentComponent } from './update-payment/update-payment.component';
 import { PaymentDetailComponent } from './payment-detail/payment-detail.component';
+import { ApplicantComponent } from './applicant/applicant.component';
+import { PersonalDetailComponent } from './personal-detail/personal-detail.component';
+import { PreMedDetailComponent } from './pre-med-detail/pre-med-detail.component';
+import { PassportDetailComponent } from './passport-detail/passport-detail.component';
+import { ExpenseDetailComponent } from './expense-detail/expense-detail.component';
+import { ApplicantDetailComponent } from './applicant-detail/applicant-detail.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,13 @@ import { PaymentDetailComponent } from './payment-detail/payment-detail.componen
     SingleAgentDetailComponent,
     SingleAgentComponent,
     UpdatePaymentComponent,
-    PaymentDetailComponent
+    PaymentDetailComponent,
+    ApplicantComponent,
+    PersonalDetailComponent,
+    PreMedDetailComponent,
+    PassportDetailComponent,
+    ExpenseDetailComponent,
+    ApplicantDetailComponent
   ],
   imports: [
     BrowserModule,

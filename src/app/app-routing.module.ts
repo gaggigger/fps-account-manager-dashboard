@@ -15,6 +15,12 @@ import { SingleAgentDetailComponent } from './single-agent-detail/single-agent-d
 import { SingleAgentComponent } from './single-agent/single-agent.component';
 import { UpdatePaymentComponent } from './update-payment/update-payment.component';
 import { PaymentDetailComponent } from './payment-detail/payment-detail.component';
+import { ApplicantComponent } from './applicant/applicant.component';
+import { ApplicantDetailComponent } from './applicant-detail/applicant-detail.component';
+import { PersonalDetailComponent } from './personal-detail/personal-detail.component';
+import { PreMedDetailComponent } from './pre-med-detail/pre-med-detail.component';
+import { PassportDetailComponent } from './passport-detail/passport-detail.component';
+import { ExpenseDetailComponent } from './expense-detail/expense-detail.component';
 
 
 const routes: Routes = [
@@ -89,8 +95,44 @@ component:LoginComponent
 		}]
 		},
 		{
-			path:'applicantLists',
-			component:ApplicantListComponent
+			path:'applicant',
+			component:ApplicantComponent,
+			children:[
+				{
+					path:'',
+					component:ApplicantListComponent
+				},
+				{
+					path:'list',
+					component:ApplicantListComponent
+				},
+				{
+					path:'detail',
+					component:ApplicantDetailComponent,
+					children:[
+						{
+							path:'',
+							component:PersonalDetailComponent
+						},
+						{
+							path:'personal',
+							component:PersonalDetailComponent
+						},
+						{
+							path:'medical',
+							component:PreMedDetailComponent
+						},
+						{
+							path:'passport',
+							component:PassportDetailComponent
+						},
+						{
+							path:'expense',
+							component:ExpenseDetailComponent
+						}
+					]
+				}
+			]
 		}
 	]
 },
