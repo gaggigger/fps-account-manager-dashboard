@@ -8,6 +8,11 @@ import { ProfileDetailComponent } from './profile-detail/profile-detail.componen
 import { AllAgentsComponent } from './all-agents/all-agents.component';
 import { PayAgentsComponent } from './pay-agents/pay-agents.component';
 import { ApplicantListComponent } from './applicant-list/applicant-list.component';
+import { AllAgentListComponent } from './all-agent-list/all-agent-list.component';
+import { ViewAgentDetailComponent } from './view-agent-detail/view-agent-detail.component';
+import { UpdateAgentDetailComponent } from './update-agent-detail/update-agent-detail.component';
+import { SingleAgentDetailComponent } from './single-agent-detail/single-agent-detail.component';
+import { SingleAgentComponent } from './single-agent/single-agent.component';
 
 
 const routes: Routes = [
@@ -32,15 +37,43 @@ component:LoginComponent
 			component:ProfileDetailComponent
 		},
 		{
-			path:'home/allAgents',
-			component:AllAgentsComponent
+			path:'allAgents',
+			component:AllAgentsComponent,
+			children:[
+				{
+					path:'',
+					component:AllAgentListComponent
+				},
+				{
+					path:'view',
+					component:ViewAgentDetailComponent
+				},
+				{
+					path:'update',
+					component:SingleAgentDetailComponent,
+					children:[
+						{
+							path:'',
+							component:SingleAgentComponent
+						},
+						{
+							path:'view',
+							component:ViewAgentDetailComponent
+						},
+						{
+							path:'update',
+							component:UpdateAgentDetailComponent
+						}
+					]
+				}
+			]
 		},
 		{
-			path:'home/payAgents',
+			path:'payAgents',
 			component:PayAgentsComponent
 		},
 		{
-			path:'home/applicantLists',
+			path:'applicantLists',
 			component:ApplicantListComponent
 		}
 	]

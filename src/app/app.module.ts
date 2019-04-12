@@ -11,6 +11,11 @@ import { ProfileDetailComponent } from './profile-detail/profile-detail.componen
 import { AllAgentsComponent } from './all-agents/all-agents.component';
 import { PayAgentsComponent } from './pay-agents/pay-agents.component';
 import { ApplicantListComponent } from './applicant-list/applicant-list.component';
+import { ViewAgentDetailComponent } from './view-agent-detail/view-agent-detail.component';
+import { UpdateAgentDetailComponent } from './update-agent-detail/update-agent-detail.component';
+import { AllAgentListComponent } from './all-agent-list/all-agent-list.component';
+import { SingleAgentDetailComponent } from './single-agent-detail/single-agent-detail.component';
+import { SingleAgentComponent } from './single-agent/single-agent.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { ApplicantListComponent } from './applicant-list/applicant-list.componen
     ProfileDetailComponent,
     AllAgentsComponent,
     PayAgentsComponent,
-    ApplicantListComponent
+    ApplicantListComponent,
+    ViewAgentDetailComponent,
+    UpdateAgentDetailComponent,
+    AllAgentListComponent,
+    SingleAgentDetailComponent,
+    SingleAgentComponent
   ],
   imports: [
     BrowserModule,
