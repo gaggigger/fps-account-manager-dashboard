@@ -4,7 +4,7 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-*{
+:root{
     --blue:#E91E63;
     --dark-blue:#A90034;
     --light-blue:#E499A4;
