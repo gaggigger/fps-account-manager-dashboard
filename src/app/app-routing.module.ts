@@ -13,6 +13,8 @@ import { ViewAgentDetailComponent } from './view-agent-detail/view-agent-detail.
 import { UpdateAgentDetailComponent } from './update-agent-detail/update-agent-detail.component';
 import { SingleAgentDetailComponent } from './single-agent-detail/single-agent-detail.component';
 import { SingleAgentComponent } from './single-agent/single-agent.component';
+import { UpdatePaymentComponent } from './update-payment/update-payment.component';
+import { PaymentDetailComponent } from './payment-detail/payment-detail.component';
 
 
 const routes: Routes = [
@@ -70,7 +72,21 @@ component:LoginComponent
 		},
 		{
 			path:'payAgents',
-			component:PayAgentsComponent
+			component:PayAgentsComponent,
+			children:[
+				{
+					path:'',
+					component:UpdatePaymentComponent
+
+				},
+			{
+				path:'update',
+				component:UpdatePaymentComponent
+			},
+		{
+			path:'detail',
+			component:PaymentDetailComponent
+		}]
 		},
 		{
 			path:'applicantLists',

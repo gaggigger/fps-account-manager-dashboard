@@ -16,6 +16,8 @@ import { UpdateAgentDetailComponent } from './update-agent-detail/update-agent-d
 import { AllAgentListComponent } from './all-agent-list/all-agent-list.component';
 import { SingleAgentDetailComponent } from './single-agent-detail/single-agent-detail.component';
 import { SingleAgentComponent } from './single-agent/single-agent.component';
+import { UpdatePaymentComponent } from './update-payment/update-payment.component';
+import { PaymentDetailComponent } from './payment-detail/payment-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { SingleAgentComponent } from './single-agent/single-agent.component';
     UpdateAgentDetailComponent,
     AllAgentListComponent,
     SingleAgentDetailComponent,
-    SingleAgentComponent
+    SingleAgentComponent,
+    UpdatePaymentComponent,
+    PaymentDetailComponent
   ],
   imports: [
     BrowserModule,
